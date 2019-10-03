@@ -2,4 +2,5 @@
 
 example_mech_motor=0
 
-sol = 
+sol = 1
+mechTal = 2

@@ -10,7 +10,6 @@ package frc.robot;
 import java.util.HashSet;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.SerialPort.Port;
 import frc.config.Config;
 
 import frc.mechs.ExampleMech;;
@@ -23,8 +22,9 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
         Config.start();
         mechs = new HashSet<>();
-        mechs.add(new ExampleMech());
+        
         // TODO: Add mechs here
+        mechs.add(new ExampleMech());
     }
 
     @Override

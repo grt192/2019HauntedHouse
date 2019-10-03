@@ -42,7 +42,7 @@ public class Config {
 	public static void start() {
 		map = new HashMap<>();
 
-		String fileName = "hauntedhouse2018.txt";
+		String fileName = "hauntedhouse2019.txt";
 		System.out.println("reading from file " + fileName);
 		InputStream stream = Config.class.getResourceAsStream(fileName);
 		Scanner scanner = new Scanner(stream);

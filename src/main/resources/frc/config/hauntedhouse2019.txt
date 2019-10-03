@@ -1,0 +1,5 @@
+# Config file for haunted house 2019
+
+example_mech_motor=0
+
+sol = 

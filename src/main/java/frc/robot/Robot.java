@@ -12,7 +12,8 @@ import java.util.HashSet;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import frc.config.Config;
 
-import frc.mechs.ExampleMech;;
+import frc.mechs.ExampleMech;
+import frc.mechs.DecapitationMech;
 
 public class Robot extends IterativeRobot {
 
@@ -22,8 +23,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
         Config.start();
         mechs = new HashSet<>();
-        
-        // TODO: Add mechs here
+
+        mechs.add(new DecapitationMech());
         mechs.add(new ExampleMech());
     }
 

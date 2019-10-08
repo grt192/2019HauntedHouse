@@ -8,7 +8,6 @@ import edu.wpi.first.wpilibj.Solenoid;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-
 public class ExampleMech extends Mech {
 
     private Solenoid sol;
@@ -17,14 +16,13 @@ public class ExampleMech extends Mech {
     private int direction;
     private TalonSRX mechTal;
 
-    public ExampleMech(){
+    public ExampleMech() {
         sol = new Solenoid(Config.getInt("sol"));
         mechTal = new TalonSRX(Config.getInt("mechTal"));
     }
 
     public void loop() throws InterruptedException {
-
-        //TODO: Here is an example of how to control different mechanisms
+        // TODO: Here is an example of how to control different mechanisms
 
         // Pneumatics
         sol.set(true);
@@ -35,4 +33,4 @@ public class ExampleMech extends Mech {
         direction = (Math.random() > 0.5) ? -1 : 1;
         mechTal.set(ControlMode.PercentOutput, SPEED * direction);
     }
-} 
+}

@@ -22,7 +22,6 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
         Config.start();
         mechs = new HashSet<>();
-        // TODO: Add mechs here
         mechs.add(new SkeletonMech());
     }
 

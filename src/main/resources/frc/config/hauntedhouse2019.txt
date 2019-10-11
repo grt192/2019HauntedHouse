@@ -2,5 +2,6 @@
 
 example_mech_motor=0
 
-sol = 1
-mechTal = 2
+doll_motor=1
+doll_limit1=2
+doll_limit2=3

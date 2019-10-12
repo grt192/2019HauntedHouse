@@ -15,6 +15,7 @@ public class SkeletonMech extends Mech {
 
     public void loop() throws InterruptedException {
         sol.set(true);
+        // Placeholder values which will be adusted when we actually test mech
         Thread.sleep((long) (Math.random() * 4000 + 3000));
         sol.set(false);
         Thread.sleep((long) (Math.random() * 4000 + 3000));

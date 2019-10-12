@@ -23,6 +23,8 @@ public class DecapitationMech extends Mech {
 
     public void loop() throws InterruptedException {
         // Pneumatics
+        // move the arm up for a random amt of time, then move down for 
+        // another random amt of time
         sol.set(true);
         Thread.sleep((int) (3000 + Math.random() * 3000));
         sol.set(false);

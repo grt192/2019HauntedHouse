@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
         mechs = new HashSet<>();
         
         // TODO: Add mechs here
-        mechs.add(new 2ndleftzombiemech());
+        mechs.add(new zombiearmsmech());
     }
 
     @Override

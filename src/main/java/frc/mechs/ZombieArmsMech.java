@@ -19,11 +19,11 @@ public class ZombieArmsMech extends Mech {
 
         // Pneumatics
         zarmleft.set(true);
-        Thread.sleep((int) (Math.random() + 1)* 300);
+        Thread.sleep((long) (Math.random() + 1)* 300);
         zarmright.set(true);
-        Thread.sleep((int) (Math.random() + 1)* 2000);
+        Thread.sleep((long) (Math.random() + 1)* 2000);
         zarmleft.set(false);
         zarmright.set(false);
-        Thread.sleep((int) (Math.random() + 1)* 1000);
+        Thread.sleep((long) (Math.random() + 1)* 1000);
     }
 } 

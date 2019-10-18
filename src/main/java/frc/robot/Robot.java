@@ -11,9 +11,7 @@ import java.util.HashSet;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import frc.config.Config;
-import frc.mechs.CreepyBoxMech;
-
-import frc.mechs.DecapitationMech;
+import frc.mechs.*;
 
 public class Robot extends IterativeRobot {
 
@@ -26,6 +24,8 @@ public class Robot extends IterativeRobot {
 
         mechs.add(new CreepyBoxMech());
         mechs.add(new DecapitationMech());
+        mechs.add(new DollMech());
+        mechs.add(new ZombieArmsMech());
     }
 
     @Override

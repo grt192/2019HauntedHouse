@@ -9,11 +9,11 @@ package frc.robot;
 
 import java.util.HashSet;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.TimedRobot;
 import frc.config.Config;
 import frc.mechs.*;
 
-public class Robot extends IterativeRobot {
+public class Robot extends TimedRobot {
 
     private HashSet<Mech> mechs;
 

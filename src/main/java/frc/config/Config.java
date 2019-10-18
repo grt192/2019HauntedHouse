@@ -1,12 +1,15 @@
 package frc.config;
 
-import java.io.InputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
+import edu.wpi.first.wpilibj.Filesystem;
 
 public class Config {
 	private static Map<String, String> map;
@@ -41,24 +44,30 @@ public class Config {
 
 	public static void start() {
 		map = new HashMap<>();
+		try {
+			Scanner nameScanner = new Scanner(new File("/home/lvuser/name.192"));
+			String name = nameScanner.nextLine();
+			nameScanner.close();
+			String fileName = name + ".txt";
+			System.out.println("reading from file " + fileName);
+			File f = new File(Filesystem.getDeployDirectory(), fileName);
+			Scanner scanner = new Scanner(f);
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
 
-		String fileName = "hauntedhouse2019.txt";
-		System.out.println("reading from file " + fileName);
-		InputStream stream = Config.class.getResourceAsStream(fileName);
-		Scanner scanner = new Scanner(stream);
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
+				while (line.startsWith(" "))
+					line = line.substring(1);
 
-			while (line.startsWith(" "))
-				line = line.substring(1);
-
-			if (line.length() > 0 && line.charAt(0) != '#') {
-				String[] splitted = line.trim().split("=");
-				if (splitted.length == 2)
-					map.put(splitted[0], splitted[1]);
+				if (line.length() > 0 && line.charAt(0) != '#') {
+					String[] splitted = line.trim().split("=");
+					if (splitted.length == 2)
+						map.put(splitted[0], splitted[1]);
+				}
 			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
-		scanner.close();
 
 		for (String s : map.keySet()) {
 			System.out.println(s + ": " + getString(s));
@@ -67,6 +76,7 @@ public class Config {
 	}
 
 	public static void defaultConfigTalon(TalonSRX talon) {
+		talon.configFactoryDefault();
 		talon.configForwardSoftLimitEnable(false, 0);
 		talon.configReverseSoftLimitEnable(false, 0);
 		talon.setNeutralMode(NeutralMode.Brake);

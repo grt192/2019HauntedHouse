@@ -32,5 +32,5 @@ public class ExampleMech extends Mech {
         // Motors
         direction = (Math.random() > 0.5) ? -1 : 1;
         mechTal.set(ControlMode.PercentOutput, SPEED * direction);
-    }
+    }   
 }

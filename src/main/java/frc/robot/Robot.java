@@ -13,6 +13,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import frc.config.Config;
 import frc.mechs.CreepyBoxMech;
 
+import frc.mechs.DecapitationMech;
+
 public class Robot extends IterativeRobot {
 
     private HashSet<Mech> mechs;
@@ -23,6 +25,7 @@ public class Robot extends IterativeRobot {
         mechs = new HashSet<>();
 
         mechs.add(new CreepyBoxMech());
+        mechs.add(new DecapitationMech());
     }
 
     @Override

@@ -26,6 +26,7 @@ public class Robot extends IterativeRobot {
         mechs.add(new DecapitationMech());
         mechs.add(new DollMech());
         mechs.add(new ZombieArmsMech());
+        mechs.add(new SkeletonMech());
     }
 
     @Override

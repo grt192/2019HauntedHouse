@@ -12,7 +12,8 @@ import java.util.HashSet;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import frc.config.Config;
 
-import frc.mechs.ExampleMech;;
+import frc.mechs.ExampleMech;
+import frc.mechs.DollMech;
 
 public class Robot extends IterativeRobot {
 
@@ -25,6 +26,7 @@ public class Robot extends IterativeRobot {
         
         // TODO: Add mechs here
         mechs.add(new ExampleMech());
+        mechs.add(new DollMech());
     }
 
     @Override

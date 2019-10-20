@@ -15,9 +15,10 @@ public class SkeletonMech extends Mech {
 
     public void loop() throws InterruptedException {
         sol.set(true);
-        // Placeholder values which will be adusted when we actually test mech
-        Thread.sleep((long) (Math.random() * 4000 + 3000));
+        // Pnuematic should run from 7-10 seconds, group agreed that larger times so
+        // less wear on pnuematic
+        Thread.sleep((long) (Math.random() * 7000 + 3000));
         sol.set(false);
-        Thread.sleep((long) (Math.random() * 4000 + 3000));
+        Thread.sleep((long) (Math.random() * 7000 + 3000));
     }
 }

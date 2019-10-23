@@ -10,17 +10,16 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 public class CreepyBoxMech extends Mech {
 
-    private Solenoid sol;
-
-    private static final double SPEED = 0.1;
+    private static final double POWER = 0.35;
     private int direction = 1;
 
     // initially set to right direction
-    private TalonSRX mechTal;
+    private TalonSRX motor;
+    private Solenoid sol;
 
     public CreepyBoxMech() {
-        sol = new Solenoid(Config.getInt("sol"));
-        mechTal = new TalonSRX(Config.getInt("mechTal"));
+        this.sol = new Solenoid(Config.getInt("pcm2"), Config.getInt("box_sol"));
+        this.motor = new TalonSRX(Config.getInt("box_motor"));
     }
 
     public void loop() throws InterruptedException {
@@ -30,14 +29,9 @@ public class CreepyBoxMech extends Mech {
         Thread.sleep(3000);
         sol.set(false);
 
-        // direction = (Math.random() > 0.5) ? -1 : 1;
-
         // makes box shake, 1 second right + 1 second left (motor)
-        mechTal.set(ControlMode.PercentOutput, SPEED * direction);
-        wait(1000);
-        mechTal.set(ControlMode.PercentOutput, 0);
-        wait(1000);
-        direction = -direction;
-
+        motor.set(ControlMode.PercentOutput, POWER * direction);
+        Thread.sleep(1000);
+        direction *= -1;
     }
 }

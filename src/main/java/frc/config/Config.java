@@ -79,7 +79,7 @@ public class Config {
 		talon.configFactoryDefault();
 		talon.configForwardSoftLimitEnable(false, 0);
 		talon.configReverseSoftLimitEnable(false, 0);
-		talon.setNeutralMode(NeutralMode.Brake);
+		talon.setNeutralMode(NeutralMode.Coast);
 		talon.configOpenloopRamp(0, 0);
 	}
 }

@@ -22,11 +22,9 @@ public class Robot extends TimedRobot {
         Config.start();
         mechs = new HashSet<>();
 
-        mechs.add(new CreepyBoxMech());
-        mechs.add(new DecapitationMech());
-        mechs.add(new DollMech());
-        mechs.add(new ZombieArmsMech());
-        mechs.add(new SkeletonMech());
+        // mechs.add(new CreepyBoxMech());
+        // mechs.add(new SpookyBalloon());
+        mechs.add(new SkeletonSpiderMech());
     }
 
     @Override
@@ -35,8 +33,9 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-        for (Mech mech : mechs)
+        for (Mech mech : mechs) {
             mech.start();
+        }
     }
 
     @Override

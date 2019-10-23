@@ -1,7 +1,23 @@
 # Config file for 2019 Haunted House
 # Domain: roborio-192-frc.local
 
-example_mech_motor=0
+pcm1=1
+pcm2=2
 
-sol = 1
-mechTal = 2
+box_motor=14
+box_sol=0
+
+balloon_motor=13
+
+decapitation_sol=
+
+doll_motor=
+doll_limit1=
+doll_limit2=
+
+skeleton_sol=
+
+skeleton_spider_motor=16
+
+zombie_solL=
+zombie_solR=

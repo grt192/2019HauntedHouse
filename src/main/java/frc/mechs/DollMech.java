@@ -42,7 +42,7 @@ public class DollMech extends Mech {
         boolean currSwitchVal2 = limitSwitch2.get();
 
         //reverses motor if either limit switchs are pressed
-        if(currSwitchVal1 == true || currSwitchVal2 == true){
+        if(currSwitchVal1 == false || currSwitchVal2 == false){
             currentOutputValue *= -1;
             motor.set(ControlMode.PercentOutput, currentOutputValue);
             Thread.sleep(300);

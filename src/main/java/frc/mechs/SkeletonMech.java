@@ -10,7 +10,7 @@ public class SkeletonMech extends Mech {
     private Solenoid sol;
 
     public SkeletonMech() {
-        sol = new Solenoid(Config.getInt("skeleton_sol"));
+        sol = new Solenoid(Config.getInt("pcm2"), Config.getInt("skeleton_sol"));
     }
 
     public void loop() throws InterruptedException {

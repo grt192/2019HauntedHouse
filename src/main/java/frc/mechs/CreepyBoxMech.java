@@ -28,10 +28,12 @@ public class CreepyBoxMech extends Mech {
         sol.set(true);
         Thread.sleep(3000);
         sol.set(false);
+        Thread.sleep(1000);
 
         // makes box shake, 1 second right + 1 second left (motor)
         motor.set(ControlMode.PercentOutput, POWER * direction);
         Thread.sleep(1000);
+        motor.set(ControlMode.PercentOutput, 0);
         direction *= -1;
     }
 }

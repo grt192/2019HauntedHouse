@@ -11,8 +11,8 @@ public class ZombieArmsMech extends Mech {
     private Solenoid zarmright;
 
     public ZombieArmsMech() {
-        zarmleft = new Solenoid(Config.getInt("zombie_solL"));
-        zarmright = new Solenoid(Config.getInt("zombie_solR"));
+        zarmleft = new Solenoid(Config.getInt("pcm2"), Config.getInt("zombie_solL"));
+        zarmright = new Solenoid(Config.getInt("pcm2"), Config.getInt("zombie_solR"));
     }
 
     public void loop() throws InterruptedException {

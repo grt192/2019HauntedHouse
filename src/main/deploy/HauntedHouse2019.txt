@@ -9,15 +9,19 @@ box_sol=0
 
 balloon_motor=13
 
-decapitation_sol=
+decapitation_sol=1
 
-doll_motor=
-doll_limit1=
-doll_limit2=
+doll_motor=15
+doll_limit1=2
+doll_limit2=0
 
-skeleton_sol=
+skeleton_sol=4
 
-skeleton_spider_motor=16
+skeleton_door_motor=16
+skeleton_door_sol=5
 
-zombie_solL=
-zombie_solR=
+zombie_solL=2
+zombie_solR=3
+
+candy_solL=6
+candy_solR=2

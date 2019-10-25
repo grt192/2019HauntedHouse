@@ -24,7 +24,12 @@ public class Robot extends TimedRobot {
 
         // mechs.add(new CreepyBoxMech());
         // mechs.add(new SpookyBalloon());
-        mechs.add(new SkeletonSpiderMech());
+        // mechs.add(new SkeletonDoorMech());
+        // mechs.add(new DecapitationMech());
+        // mechs.add(new SkeletonMech());
+        // mechs.add(new ZombieArmsMech());
+        // mechs.add(new CandyMech());
+        mechs.add(new DollMech());
     }
 
     @Override

@@ -10,7 +10,7 @@ public class DecapitationMech extends Mech {
     private Solenoid sol;
 
     public DecapitationMech() {
-        sol = new Solenoid(Config.getInt("decapitation_sol"));
+        sol = new Solenoid(Config.getInt("pcm2"), Config.getInt("decapitation_sol"));
     }
 
     public void loop() throws InterruptedException {

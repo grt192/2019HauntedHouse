@@ -24,9 +24,11 @@ public class SkeletonDoorMech extends Mech {
     public void loop() throws InterruptedException {
         sol.set(true);
         motor.set(ControlMode.PercentOutput, POWER);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+        motor.set(ControlMode.PercentOutput, 0);
+        Thread.sleep(15000);
         motor.set(ControlMode.PercentOutput, POWER * -1);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         sol.set(false);
     }
 }

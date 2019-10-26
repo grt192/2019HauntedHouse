@@ -3,25 +3,22 @@ package frc.mechs;
 import frc.config.Config;
 import frc.robot.Mech;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+
 
 public class SpookyBalloon extends Mech {
 
-    private static final double POWER = 0.1;
-    private double direction;
-
-    // initially set to right direction
-    private TalonSRX motor;
+    private DoubleSolenoid sol;
 
     public SpookyBalloon() {
-        this.direction = 1.0;
-        this.motor = new TalonSRX(Config.getInt("balloon_motor"));
+        this.sol = new DoubleSolenoid(Config.getInt("pcm2"), Config.getInt("balloon_sol1"), Config.getInt("balloon_sol2"));
     }
 
     public void loop() throws InterruptedException {
-        motor.set(ControlMode.PercentOutput, POWER * direction);
-        Thread.sleep(5000);
-        direction *= -1.0;
+        sol.set(Value.kForward);
+        Thread.sleep(10000);
+        sol.set(Value.kReverse);
+        Thread.sleep(10000);
     }
 }

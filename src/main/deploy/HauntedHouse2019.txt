@@ -2,18 +2,17 @@
 # Domain: roborio-192-frc.local
 
 pcm1=1
-pcm2=2
+pcm2=0
 
 box_motor=14
 box_sol=0
 
-balloon_motor=13
+balloon_sol1=7
+balloon_sol2=6
 
 decapitation_sol=1
 
 doll_motor=15
-doll_limit1=2
-doll_limit2=0
 
 skeleton_sol=4
 
@@ -23,5 +22,5 @@ skeleton_door_sol=5
 zombie_solL=2
 zombie_solR=3
 
-candy_solL=6
+candy_solL=0
 candy_solR=2

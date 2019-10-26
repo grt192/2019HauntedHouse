@@ -14,11 +14,9 @@ public class DecapitationMech extends Mech {
     }
 
     public void loop() throws InterruptedException {
-
         sol.set(true);
         Thread.sleep((int) (3000 + Math.random() * 3000));
         sol.set(false);
         Thread.sleep((int) (3000 + Math.random() * 3000));
-
     }
 }
